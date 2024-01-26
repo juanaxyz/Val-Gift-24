@@ -1,0 +1,38 @@
+.gift-box::before{
+    content:"";
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    background: #e76e51;
+    left : 60px;
+}
+.gift-box::after{
+    content: "";
+    position: absolute;
+    box-shadow: inset 0 10px rgba(0, 0, 0, .3);
+    width: 150px;
+    height: 10px;
+    top:0;
+}
+
+.click::before{
+    content:"";
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: #e76e51;
+    left : 80px;
+}
+.click::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 0;
+    border-bottom: 60px solid #e76e51;
+    border-top: 60px solid #e76e51;
+    border-left: 0px solid transparent;
+    border-right: 60px solid transparent;
+    transform: rotate(-90deg);
+    top: -93px;
+    left: 67px;
+}
