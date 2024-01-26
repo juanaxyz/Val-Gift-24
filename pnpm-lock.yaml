@@ -35,9 +35,6 @@ dependencies:
   react-jigsaw-puzzle:
     specifier: ^1.0.5
     version: 1.0.5(react-dom@18.2.0)(react@18.2.0)
-  react-particles-js:
-    specifier: ^3.6.0
-    version: 3.6.0(react@18.2.0)(tsparticles@3.1.0)
   react-router-dom:
     specifier: ^6.21.3
     version: 6.21.3(react-dom@18.2.0)(react@18.2.0)
