@@ -1,34 +1,49 @@
 import { useState } from "react";
 import "./box.css";
 import { TypeAnimation } from "react-type-animation";
-import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import audioBG from "/image/audiobg.mp3"
 
 function Box() {
   const [isClicked, setIsClicked] = useState(false);
-
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
-
-
-  const navigate = useNavigate();
-  const RouteChange = () => {
-    let path = `/jigsaw`;
-    navigate(path);
+  const LastMessage = () => {
+    Swal.fire({
+      title: "Sekian Dari SESEORANG",
+      icon: "info",
+    }).then((res) => {
+      if (res.isConfirmed) {
+        Swal.fire({
+          title: "Thank youu",
+          iconHtml: '<img src="/image/thank-you.png">',
+          customClass: {
+            icon: "no-border",
+          },
+          text: "ehh bentar 1 video lagiii",
+        }).then((respon) => {
+          if (respon.isConfirmed) {
+            window.open("/image/vid1.mp4");
+          }
+        });
+      }
+    });
   };
 
   return (
     <>
+    <audio src="/image/audiobg.mp3" loop autoPlay></audio>
       <div className="container h-screen overflow-hidden flex justify-center items-center">
-       {/* shadow */}
+        {/* shadow */}
         <div
-          className={`shadow relative w-[150px] h-[20px] bg-black bg-opacity-40 rounded-[50%] top-[60px] animate-BounceOut ${
+          className={`shadow relative w-[150px] h-[20px] bg-black bg-opacity-40 rounded-[50%] top-[26%] animate-BounceOut ${
             isClicked ? "animate-none" : "animate-BounceOut"
           }`}
         ></div>
         {/* box */}
         <div
-          className={`gift-box w-[150px] h-[100px] bg-[#ec9c4a] absolute ${
+          className={`gift-box w-[150px] h-[100px] bottom-1/4 bg-[#ec9c4a] absolute ${
             isClicked ? "animate-none" : "animate-BounceIn"
           }`}
         >
@@ -57,7 +72,10 @@ function Box() {
                   "I Thought Happiness started with H",
                   1500,
                   "But Mine, it started with U",
-
+                  2500,
+                  () => {
+                    LastMessage();
+                  },
                 ]}
                 wrapper="span"
                 speed={50}
@@ -65,13 +83,9 @@ function Box() {
                 repeat={"no"}
               />
             )}
-
           </div>
         </div>
-            
-           
       </div>
-
     </>
   );
 }

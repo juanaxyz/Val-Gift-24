@@ -19,18 +19,32 @@ module.exports = {
           '100%':{transform: 'translateY(-24px)', scale : '.7'}
         },
         ButtonScale:{
-          '0%':{scale:'1'},
-          '100%':{scale:'1.7'},
-        }
+          "0%" :{
+            opacity: "0",
+            filter: "blur(1rem)",
+            transform: "translate3d(0, 3rem, 0) rotate3d(0.25, -1, 0, 66.6deg)",
+          },
+          
+          "60%" :{
+            opacity: "1",
+            filter: "blur(0px)",
+            transform: "translate3d(0, 0, 0)",
+          },
+          "100%" :{
+            opacity: "0",
+            filter: "blur(1rem)",
+            transform: "translate3d(0, -3rem, 0) rotate3d(-0.25, 1, 0, 66.6deg)",
+          },
+        },
       },
       animation:{
         'BounceIn':'BounceIn 4s infinite forwards ease',
         'BounceOut':'BounceOut 4s infinite forwards ease',
-        'Button':'ButtonScale 1s forwards ease',
+        'Button':'ButtonScale 4s once forwards ease',
       }
     },
   },
   plugins: [
 
   ],
-};
+}
