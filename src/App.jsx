@@ -1,12 +1,24 @@
 import Box from "./components/box";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Particle from "./components/particles";
-import AudioBG from "/image/audiobg.mp3";
+import Swal from "sweetalert2";
+
 function App() {
+
+ useEffect(()=>{
+  Swal.fire({
+    title:"Klik OK",
+    icon:"warning"
+  }).then((res)=>{
+    if(res.isConfirmed){
+      const audio = new Audio("/image/audiobg.mp3")
+      audio.play();
+    }
+  })
+ })
   return (
     <>
       <Particle />
-      <audio src={AudioBG} loop autoPlay hidden></audio>
       <div className="w-full h-screen">
         <div className="ucapan absolute mt-24 flex flex-col w-screen text-center font-bold text-red-300 ">
           <h1 className="font-Montserrat text-3xl">HAPPY</h1>

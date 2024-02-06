@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@sweetalert2/theme-dark':
+    specifier: ^5.0.16
+    version: 5.0.16
   '@tsparticles/engine':
     specifier: ^3.1.0
     version: 3.1.0
@@ -780,6 +783,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@sweetalert2/theme-dark@5.0.16:
+    resolution: {integrity: sha512-SFXEVfp9jmaBLhYEeRilrcpQP/sQimfjtZdvazJ+l5jEdNVKDkPD/CD3T7V8VqUqk/q2zUBSvr0WOMrHoAvfCA==}
+    dev: false
 
   /@tsparticles/basic@3.1.0:
     resolution: {integrity: sha512-6iI70Xq87UYsTo3xZb8VYOXfXdYvG0Q0f4fhtJ6iReSRJHJWUODMKpC+BJWFh+6kfeo04S2zjyiSes5E0MEulg==}

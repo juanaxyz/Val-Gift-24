@@ -4,9 +4,9 @@
 
 @font-face{
     font-family:"satisfy";
-    src: url("font/Satisfy-Regular.ttf");
+    src: url("/font/Satisfy-Regular.ttf");
 }
 @font-face{
     font-family:"Montserrat";
-    src: url("font/Montserrat-Regular.ttf");
+    src: url("/font/Montserrat-Regular.ttf");
 }

@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./box.css";
 import { TypeAnimation } from "react-type-animation";
 import Swal from "sweetalert2";
-import audioBG from "/image/audiobg.mp3"
 
 function Box() {
   const [isClicked, setIsClicked] = useState(false);
@@ -33,7 +32,6 @@ function Box() {
 
   return (
     <>
-    <audio src="/image/audiobg.mp3" loop autoPlay></audio>
       <div className="container h-screen overflow-hidden flex justify-center items-center">
         {/* shadow */}
         <div
@@ -63,6 +61,7 @@ function Box() {
             {isClicked && (
               <TypeAnimation
                 sequence={[
+                  1500,
                   "Apple Start With A",
                   1000,
                   "Banana Start With B",
